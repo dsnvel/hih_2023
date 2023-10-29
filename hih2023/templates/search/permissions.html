@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/header_footer.css' %}">
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+{% endblock %}
+
+{% block title %} Главная {% endblock %}
+
+{% block content %}
+<main>
+    <form method="POST">
+        {% csrf_token %}
+    <table id="users-table">
+        <thead>
+            <tr>
+                <th>Почта</th>
+                <th>Права доступа</th>
+            </tr>
+        </thead>
+            <tbody>
+
+                {% for user in users %}
+                <tr>
+                    <td> <input name="input_email" readonly value="{{user.email}}" style="outline: none; background: none; border: none"> </td>
+                    <td>
+                        <select name="select">
+                            {% if user.userprofile.role == 'admin' %}
+                            <option value="admin" selected>Админ</option>
+                            {% else %}
+                            <option value="admin">Админ</option>
+                            {% endif %}
+
+                            {% if user.userprofile.role == 'verified_user' %}
+                            <option value="verified_user" selected>Подтвержденный пользователь</option>
+                            {% else %}
+                            <option value="verified_user">Подтвержденный пользователь</option>
+                            {% endif %}
+
+                            {% if user.userprofile.role == 'moderator' %}
+                            <option value="moderator" selected>Модератор</option>
+                            {% else %}
+                            <option value="moderator">Модератор</option>
+                            {% endif %}
+
+                            {% if user.userprofile.role == 'partner' %}
+                            <option value="partner" selected>Партнёр</option>
+                            {% else %}
+                            <option value="partner">Партнёр</option>
+                            {% endif %}
+
+                            {% if user.userprofile.role == 'user' %}
+                            <option value="user" selected>Обычный пользователь</option>
+                            {% else %}
+                            <option value="user">Обычный пользователь</option>
+                            {% endif %}
+                        </select>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    <button type="submit"> Сохранить </button>
+    </form>
+</main>
+{% endblock %}
+
+{% block script %}
+<script>
+
+</script>
+{% endblock %}

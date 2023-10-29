@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.desktop {
+  background-color: #ffffff;
+
+
+  width: 100%;
+}
+
+.div {
+  background-color: #ffffff;
+  width: 100%;
+
+  position: relative;
+}
+
+.overlap {
+ display: flex;
+    justify-content: space-between;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+  background-color: #fec502;
+}
+
+.image {
+
+
+
+  top: 21px;
+  left: 122px;
+  object-fit: cover;
+}
+
+.overlap-group {
+    display: flex;
+    justify-content: space-around;
+
+
+
+
+  left: 0;
+  background-color: #f0f0f0;
+}
+.form_change{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.right-content{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.element {
+  top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  font-family: "Gotham Pro-Light", Helvetica;
+  font-weight: 100;
+  color: #000000;
+  font-size: 13px;
+  line-height: normal;
+
+  letter-spacing: 0;
+}
+
+.text-wrapper {
+  top: 15px;
+    margin: 0;
+  font-family: "Gotham Pro-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 13px;
+  line-height: normal;
+
+
+  letter-spacing: 0;
+}
+
+.element-2 {
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  font-family: "Gotham Pro-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 13px;
+  line-height: normal;
+
+  letter-spacing: 0;
+}
+
+.text_wrapper_2 {
+margin-top: 10px;
+margin: 0px;
+  font-family: "Gotham Pro-Black", Helvetica;
+  font-weight: 900;
+  color: #222127;
+  font-size: 58px;
+  line-height: normal;
+  white-space: nowrap;
+text-align: center;
+
+  letter-spacing: 0;
+}
+
+.text-wrapper-3 {
+  width: 25%;
+text-align: center;
+margin-top: 10px;
+  font-family: "Helvetica-Regular", Helvetica;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 30px;
+  line-height: 28.5px;
+  white-space: nowrap;
+
+  letter-spacing: 0;
+}
+
+.text-wrapper-4 {
+  width: 25%;
+text-align: center;
+margin-top: 10px;
+  font-family: "Helvetica-Regular", Helvetica;
+  font-weight: 400;
+  color: #31383e;
+  font-size: 30px;
+  line-height: 28.5px;
+  white-space: nowrap;
+
+  letter-spacing: 0;
+}
+
+.text-wrapper-5 {
+  width: 25%;
+text-align: center;
+margin-top: 10px;
+  font-family: "Helvetica-Regular", Helvetica;
+  font-weight: 400;
+  color: #31383e;
+  font-size: 30px;
+  line-height: 28.5px;
+  white-space: nowrap;
+
+  letter-spacing: 0;
+}
+
+.rectangle {
+    border: none;
+    text-align: center;
+  width: 70%;
+  height: 42px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+
+.rectangle-2 {
+border: none;
+    text-align: center;
+
+  width: 70%;
+  height: 42px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+.overlap1{
+    display: flex;
+    justify-content: space-between;
+}
+.rectangle-3 {
+border: none;
+    text-align: center;
+  width: 70%;
+  height: 42px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+
+.div-wrapper {
+
+  width: 336px;
+  height: 50px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: #31383e;
+  cursor: pointer; /* Делаем курсор указателем при наведении */
+  transition: background-color 0.3s, color 0.3s; /* Добавляем плавный переход для изменения цвета фона и текста */
+}
+
+.div-wrapper:hover {
+  background-color: #31383e; /* Изменяем фон при наведении */
+  color: #ffffff; /* Изменяем цвет текста при наведении */
+}
+
+.text-wrapper-6 {
+  top: 7px;
+  left: 51px;
+  font-family: "Helvetica-Regular", Helvetica;
+  font-weight: 400;
+  color: #31383e;
+  font-size: 28px;
+  text-align: center;
+  line-height: 24.1px;
+  white-space: nowrap;
+    margin-top: 10px;
+  letter-spacing: 0;
+}
+
+.overlap-2 {
+margin-top: 10px;
+  width: 170px;
+  height: 42px;
+  left: 1049px;
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: #31383e;
+}
+
+.text-wrapper-7 {
+  top: 2px;
+  left: 40px;
+  font-family: "Helvetica-Regular", Helvetica;
+  font-weight: 400;
+  color: #31383e;
+  font-size: 16px;
+  text-align: center;
+  line-height: 13.8px;
+
+  letter-spacing: 0;
+}
+
+.element-wrapper {
+
+  width: 170px;
+  height: 170px;
+
+  left: 1049px;
+  background-color: #d9d9d9;
+  border-radius: 6px;
+}
+
+.img {
+
+  width: 120px;
+  height: 120px;
+  top: 28px;
+  left: 25px;
+  object-fit: cover;
+}
+
+.overlap-2:hover {
+            background-color: #31383e;
+            color: #ffffff;
+        }
+
+.rectangle input[type="text"],
+        .rectangle-2 input[type="text"],
+        .rectangle-3 input[type="text"] {
+            /*width: 50%;
+            height: 10%;*/
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #d9d9d9;
+            font-size: 16px;
+        }
+
+        /* Удалим стили для рамок вокруг "Rectangle 1", "Rectangle 2" и "Rectangle 3" */
+        .rectangle input[type="text"],
+        .rectangle-2 input[type="text"],
+        .rectangle-3 input[type="text"] {
+            outline: none;
+        }
+
+        /* Переместим текст внутри текстовых полей в "Rectangle 1", "Rectangle 2" и "Rectangle 3" в центр */
+        .rectangle input[type="text"]::placeholder,
+        .rectangle-2 input[type="text"]::placeholder,
+        .rectangle-3 input[type="text"]::placeholder {
+            text-align: center;
+        }
+
+        /* Подчеркнем активное поле */
+        .rectangle input[type="text"]:focus,
+        .rectangle-2 input[type="text"]:focus,
+        .rectangle-3 input[type="text"]:focus {
+            border: 2px solid #31383e;
+        }
+
+        /* Стили для кнопки "Прикрепить документ" */
+        .overlap-2 {
+
+            width: 170px;
+            height: 42px;
+
+            left: 1049px;
+            border-radius: 5px;
+            border: 2px solid;
+            border-color: #31383e;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Стили для текста внутри кнопки "Прикрепить документ" */
+        .text-wrapper-7 {
+            font-family: "Helvetica-Regular", Helvetica;
+            font-weight: 400;
+            color: #31383e;
+            font-size: 16px;
+            line-height: 13.8px;
+            letter-spacing: 0;
+        }
+
+        /* Стили для подсветки кнопки при наведении */
+        .overlap-2:hover {
+            background-color: #31383e;
+        }
+
+        /* Стили для текста внутри кнопки при наведении */
+        .overlap-2:hover .text-wrapper-7 {
+            color: #ffffff;
+        }
+
+        /* Стили для кнопки с тремя точками (меню) */
+        .menu-button {
+
+            width: 40px;
+            height: 40px;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        /* Стили для трем точек (горизонтальная линия) */
+        .menu-button .menu-icon {
+            width: 30px;
+            height: 3px;
+            background-color: #31383e;
+            margin: 5px 0;
+        }
+
+        /* Стили для выпадающего меню */
+        .dropdown-menu {
+
+            background-color: #ffffff;
+            border: 1px solid #31383e;
+            border-radius: 5px;
+            right: 5px;
+            display: none;
+        }
+
+        /* Показываем выпадающее меню при наведении на кнопку с тремя точками */
+        .menu-button:hover + .dropdown-menu {
+            display: block;
+        }
+
+        /* Стили для пунктов меню */
+        .menu-item {
+            padding: 5px;
+            font-family: "Helvetica-Regular", Helvetica;
+            font-weight: 400;
+            color: #31383e;
+            font-size: 16px;
+            cursor: pointer;
+        }
+      .menu-button:hover + .dropdown-menu,
+        .dropdown-menu:hover {
+            display: block;
+            position: absolute;
+        }
+
+        /* Стиль для скрытия меню при потере фокуса */
+        .dropdown-menu:not(:hover) {
+            display: none;
+        }

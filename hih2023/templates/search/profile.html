@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+    <!--<link rel="stylesheet" href="globals.css" />-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header_footer.css' %}">
+    <!--<style>
+        /* Стили для текстовых полей в "Rectangle 1", "Rectangle 2" и "Rectangle 3" */
+        .rectangle input[type="text"],
+        .rectangle-2 input[type="text"],
+        .rectangle-3 input[type="text"] {
+            width: 50%;
+            height: 20%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #d9d9d9;
+            font-size: 16px;
+        }
+
+        /* Удалим стили для рамок вокруг "Rectangle 1", "Rectangle 2" и "Rectangle 3" */
+        .rectangle input[type="text"],
+        .rectangle-2 input[type="text"],
+        .rectangle-3 input[type="text"] {
+            outline: none;
+        }
+
+        /* Переместим текст внутри текстовых полей в "Rectangle 1", "Rectangle 2" и "Rectangle 3" в центр */
+         .rectangle input[type="text"]::placeholder,
+        .rectangle-2 input[type="text"]::placeholder,
+        .rectangle-3 input[type="text"]::placeholder {
+            text-align: center;
+        }
+
+        /* Подчеркнем активное поле */
+        .rectangle input[type="text"]:focus,
+        .rectangle-2 input[type="text"]:focus,
+         .rectangle-3 input[type="text"]:focus {
+            border: 2px solid #31383e;
+        }
+
+        /* Стили для кнопки "Прикрепить документ" */
+        .overlap-2 {
+
+            width: 170px;
+            height: 42px;
+
+            border-radius: 5px;
+            border: 2px solid;
+            border-color: #31383e;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Стили для текста внутри кнопки "Прикрепить документ" */
+        .text-wrapper-7 {
+            font-family: "Helvetica-Regular", Helvetica;
+            font-weight: 400;
+            color: #31383e;
+            font-size: 16px;
+            line-height: 13.8px;
+            letter-spacing: 0;
+        }
+
+        /* Стили для подсветки кнопки при наведении */
+        .overlap-2:hover {
+            background-color: #31383e;
+        }
+
+        /* Стили для текста внутри кнопки при наведении */
+        .overlap-2:hover .text-wrapper-7 {
+            color: #ffffff;
+        }
+
+        /* Стили для кнопки с тремя точками (меню) */
+        .menu-button {
+
+            width: 40px;
+            height: 40px;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        /* Стили для трем точек (горизонтальная линия) */
+        .menu-button .menu-icon {
+            width: 30px;
+            height: 3px;
+            background-color: #31383e;
+            margin: 5px 0;
+        }
+
+        /* Стили для выпадающего меню */
+        .dropdown-menu {
+
+            background-color: #ffffff;
+            border: 1px solid #31383e;
+            border-radius: 5px;
+            right: 5px;
+            top: 60px;
+            display: none;
+        }
+
+        /* Показываем выпадающее меню при наведении на кнопку с тремя точками */
+        .menu-button:hover + .dropdown-menu {
+            display: block;
+        }
+
+        /* Стили для пунктов меню */
+        .menu-item {
+            padding: 5px;
+            font-family: "Helvetica-Regular", Helvetica;
+            font-weight: 400;
+            color: #31383e;
+            font-size: 16px;
+            cursor: pointer;
+        }
+      .menu-button:hover + .dropdown-menu,
+        .dropdown-menu:hover {
+            display: block;
+        }
+
+        /* Стиль для скрытия меню при потере фокуса */
+        .dropdown-menu:not(:hover) {
+            display: none;
+        }
+
+    </style>-->
+{% endblock %}
+
+{% block title %}
+  Личный кабинет {{ profile }}
+{% endblock %}
+{% block content %}
+<div class="desktop">
+
+            <div class = "form_change">
+                <div class="overlap-group">
+                    <div class="overlap1">
+                    <div class="element">
+                        <div type="text" name="fio" placeholder="Введите ФИО" />
+                    </div>
+                    <div class="element-2">
+                        <div type="text" name="email" placeholder="Введите почту" />
+                    </div>
+
+
+                    <label class="text_wrapper_2">Личный кабинет</label>
+                    <label class="text-wrapper-3">ФИО</label>
+
+                        <input type="text" class="rectangle" name="rectangle1" placeholder="{{profile.last_name}} {{profile.first_name}}" />
+
+                    <label class="text-wrapper-4">Почта</label>
+
+                        <input type="text" class="rectangle-2" name="rectangle2" placeholder="{{profile.email}}" />
+
+                    <label class="text-wrapper-5">Пароль</label>
+
+                        <input type="text" class="rectangle-3" name="rectangle3" placeholder="******" />
+
+                    <div class="div-wrapper">
+                        <a href="{% url 'password_change' %}">
+                        <div class="text-wrapper-6">Изменить пароль</div>
+                        </a>
+                    </div>
+                    </div>
+                    <div class="right-content">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                        <div class="overlap-2">
+                            <input value="Прикрепить" name="input_file" type="file" />
+                            <button type="submit"> Отправить </button>
+                        </div>
+                        </form>
+                        <div class="element-wrapper">
+                            <img class="img" src="img/1.png" />
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

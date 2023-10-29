@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/header_footer.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="col d-flex justify-content-center" style="display: inline-table; margin: 30px">
+    <div class="card" style="width: 40rem;">
+      <div class="card-header">
+        Регистрация пользователя
+      </div>
+          <br>
+      <div class="card-body">
+        <form method="post">
+          {% csrf_token %}
+          <div>
+          {{ form.full_name.label_tag }}
+          {{ form.full_name }}
+          </div>
+          <br>
+          <div>
+          {{ form.email.label_tag }}
+          {{ form.email }}
+          </div>
+          <br>
+          <div>
+          {{ form.password.label_tag }}
+          {{ form.password }}
+          </div>
+          <button type="submit" class="btn btn-primary">Создать</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
